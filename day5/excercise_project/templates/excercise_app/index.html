@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ home_key }}</title>
+	<link rel="stylesheet" href="{% static 'excercise_app/css/style.css' %}">
+</head>
+<body>
+
+	<h1>{{ home_key }}</h1>
+
+	<img src="{% static 'excercise_app/images/aisha.jpg' %}" alt="">
+
+	<p>
+		{{ content_key }}
+	</p>
+	
+</body>
+</html>
