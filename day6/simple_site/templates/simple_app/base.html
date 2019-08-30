@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}
+		{% endblock %}
+	</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'simple_app/css/style.css' %}">
+</head>
+<body>
+
+<div id="wrapper">
+	<a href="{% url 'index' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="{% url 'simple_app:about' %}">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="{% url 'simple_app:contact' %}">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<hr>
+
+	{% block body %}
+
+	{% endblock %}
+
+
+
+	
+	
+	
+	<footer>
+		&copy; 2019
+	</footer>
+</div>
+	
+</body>
+</html>

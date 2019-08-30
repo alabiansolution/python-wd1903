@@ -1,0 +1,26 @@
+{% extends 'simple_app/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block title %}
+{{ abt_key }}
+{% endblock %}
+
+{% block body %}
+<h1>About Us</h1>
+
+<div class="about-content">
+	<h2>{{ abt_key }}</h2>
+	<img src="{% static 'simple_app/images/Biodun-Fatoyinbo.jpg' %}" alt="">
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae illum recusandae<br> 
+		impedit optio nisi deleniti, nostrum ad labore, debitis at dolor quo autem omnis voluptatum<br>  ipsa natus harum maiores. At.Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> 
+		 Quae illum recusandae impedit optio nisi deleniti, nostrum ad labore, debitis at dolor<br>  
+		 quo autem omnis voluptatum ipsa natus harum maiores. At.Lorem ipsum dolor sit amet,<br>  consectetur adipisicing elit. Quae illum recusandae impedit optio nisi deleniti,<br> 
+		  nostrum ad labore, debitis at dolor quo autem omnis voluptatum ipsa natus harum maiores. At.
+		  quo autem omnis voluptatum ipsa natus harum maiores. At.Lorem ipsum dolor sit amet,<br>  consectetur adipisicing elit. Quae illum recusandae impedit optio nisi deleniti,<br> 
+		   nostrum ad labore, debitis at dolor quo autem omnis voluptatum ipsa natus harum maiores. At.
+	</p>
+	</div>
+
+
+{% endblock %}

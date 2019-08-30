@@ -1,0 +1,23 @@
+{% extends 'revision_app/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+{% block title %}
+{{ abt_key }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ abt_key }}</h1>
+<img src="{% static 'revision_app/images/aisha.jpg' %}">
+
+<p>
+	{{ content }}
+
+</p>
+<button>Hide</button>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quibusdam? Vero facilis, modi necessitatibus nobis! Officia vel, nobis a distinctio sequi voluptate eligendi illum at, laudantium vero ducimus ullam voluptatem.
+</p>
+
+{% endblock %}

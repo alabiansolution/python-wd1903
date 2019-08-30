@@ -1,0 +1,53 @@
+{% extends 'simple_app/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+{% block title %}
+{{ con_key }}
+{% endblock %}
+
+{% block body %}
+<h1>{{ con_key }}</h1>
+
+<div class="contact-content">
+	<div class="contact-column">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3417326683184!2d3.342225314266832!3d6.604387324051198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d7c33eb87b3%3A0xfc23c9556f669273!2sAlabian%20Solutions%20Limited!5e0!3m2!1sen!2sng!4v1566980150990!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+	<!-- END OF MAP CONTENT -->
+	<div class="contact-column">
+		<form method="post" enctype="multipart/form-data">
+			<label for="labelUser">Name</label>
+			<input type="text" name="name" id="labelUser" placeholder="Your Name"><br><br>
+			<label for="labelPhone">Phone No</label>
+			<input type="text" name="phoneNo" id="labelPhone" placeholder="Your Phone"><br><br>
+			<label for="labelEmail">Email</label>
+			<input type="text" name="subject" id="labelSubject" placeholder="Your Email"><br><br>
+			<label for="labelReferer">Referer</label>
+			<select id="labelReferer" class="form-control" name="referer">
+				 <option value="Facebook">Facebook</option>
+				 <option value="Twitter">Twitter</option>
+				 <option value="Instagram">Instagram</option>
+				 <option value="Nairaland">Nairaland</option>
+			</select><br><br>
+  			<label>Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  			<label>
+  				<input type="radio" name="gender" value="Male">
+  				Male
+            </label>
+	        <label>
+	  				<input type="radio" name="gender" value="Female">
+	  				Female
+	  		</label><br><br>
+	  		<label>Upload File</label>
+	  		<input type="file" name="upload"><br><br>
+
+	  		<label for="labelMessage">Message</label><br>
+	  		<textarea name="message" id="labelMessage"> </textarea><br><br>
+
+	  		<input type="submit" name="send" value="Send">
+		</form>
+	</div>
+	<!-- END OF FORM CONTENT -->
+</div>
+
+
+{% endblock %}

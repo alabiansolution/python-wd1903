@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>
+		{% block title %}
+		{% endblock %}
+	</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="{% static 'revision_app/css/style.css' %}">
+</head>
+<body>
+
+	<a href="{% url 'index' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="{% url 'revision_app:about' %}">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="{% url 'revision_app:service' %}">Service</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+	{% block content %}
+
+	{% endblock %}
+
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'revision_app/js/script.js' %}"></script>
+</body>
+</html>
