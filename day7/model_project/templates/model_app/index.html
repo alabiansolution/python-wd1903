@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	{% if post_key %}
+
+		{% for list in post_key %}
+
+		<h2>{{list.post_title }}</h2>
+		<p><img src="{{ list.post_image.url}}" alt=""></p>
+		<p>{{ list.post_content }}</p>
+ 
+		{% endfor %}
+	{% else %}
+	<p>No post to show </p>
+
+	{% endif %}
+</body>
+</html>

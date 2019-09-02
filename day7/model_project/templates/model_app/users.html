@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Users</title>
+</head>
+<body>
+
+	<table width="650" border="1">
+		<tr>
+			<th>Username</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Email</th>
+		</tr>
+
+		{% if list_key %}
+			{% for key in list_key %}
+			<tr>
+				<td>{{ key.username }}</td>
+				<td>{{ key.first_name }}</td>
+				<td>{{ key.last_name }}</td>
+				<td>{{ key.email }}</td>
+			</tr>
+
+			{% endfor %}
+
+		{% endif %}
+	</table>
+	
+</body>
+</html>
