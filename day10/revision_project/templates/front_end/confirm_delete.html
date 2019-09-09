@@ -1,0 +1,32 @@
+{% extends 'front_end/base.html' %}
+<!Doctype html>
+{% load static %}
+{% block title %}
+Confirm Delete
+{% endblock %}
+
+
+{% block content %}
+<section id="sectionTitle">
+   <div class="pageTitle">
+     <h1>Are you sure you want to delete</h1>
+   </div>
+</section>
+<!-- END OF PAGE TITLE -->
+<section id="content">
+ <div class="row">
+   <div class="col-sm-9" id="detailContent">
+      <form method="post">
+        
+        
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="{% url 'revision_app:post_list' %}">Cancel</a>
+        {% csrf_token %}
+       
+      </form>
+
+   </div>
+  {% include 'front_end/sidebar.html' %}
+ </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'front_end/base.html' %}
+<!Doctype html>
+{% load static %}
+{% block title %}
+Create Post
+{% endblock %}
+
+
+{% block content %}
+<section id="sectionTitle">
+   <div class="pageTitle">
+     <h1>
+
+       {% if not form.instance.pk %}
+          Add Post
+        {% else %}
+          Edit Post
+       {% endif %}
+
+     </h1>
+   </div>
+</section>
+<!-- END OF PAGE TITLE -->
+<section id="content">
+ <div class="row">
+   <div class="col-sm-9" id="detailContent">
+    {{ form.media }}
+      <form method="post" enctype="multipart/form-data">
+       
+        {{ form.as_p }}
+        {% csrf_token %}
+        {% if not form.instance.pk %}
+           <input type="submit" class="btn btn-primary" value="Create Post">
+         {% else %}
+          <input type="submit" class="btn btn-primary" value="Edit Post">
+        {% endif %}
+       
+      </form>
+
+   </div>
+  {% include 'front_end/sidebar.html' %}
+ </div>
+</section>
+{% endblock %}

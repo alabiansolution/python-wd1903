@@ -1,0 +1,50 @@
+{% extends 'front_end/base.html' %}
+<!Doctype html>
+{% load static %}
+{% block title %}
+{{ abt_det.name }}
+{% endblock %}
+
+
+{% block content %}
+<section id="sectionTitle">
+   <div class="pageTitle">
+     <h1>{{ abt_det.name }}</h1>
+   </div>
+</section>
+<!-- END OF PAGE TITLE -->
+<section id="content">
+ <div class="row">
+   <div class="col-sm-9" id="detailContent">
+     
+     <table class="table table-bordered">
+       <tr>
+         <th>Post Title</th>
+         <th>Post Image</th>
+         <th>Post Content</th>
+         <th>Post Date</th>
+         <th>View Detail</th>
+         <th colspan="2">Action</th>
+       </tr>
+       {% if post_list %}
+       {% for key in post_list %}
+       <tr>
+         <td>{{ key.post_title }}</td>
+         <td width="50" height="50"><img src="{{ key.post_img.url }}" alt=""></td>
+         <td>{{ key.content }}</td>
+         <td>{{ key.create_date }}</td>
+         <td><a href="{% url 'revision_app:post_detail' pk=key.id %}">View Post Detail</a></td>
+         <td><a href="{% url 'revision_app:update_post' pk=key.id %}">Update Post</a></td>
+         <td><a href="{% url 'revision_app:delete_post' pk=key.id %}">Delete Post</a></td>
+
+       </tr>
+
+       {% endfor %}
+       {% endif %}
+     </table>
+
+   </div>
+  {% include 'front_end/sidebar.html' %}
+ </div>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'front_end/base.html' %}
+<!Doctype html>
+{% load static %}
+{% block title %}
+Contact Form 1
+{% endblock %}
+
+
+{% block content %}
+<section id="sectionTitle">
+   <div class="pageTitle">
+     <h1>Post Form</h1>
+   </div>
+</section>
+<!-- END OF PAGE TITLE -->
+<section id="content">
+  <div class="row">
+    <div class="col-sm-9" id="mainContent">
+      {% if messages %}
+      
+          {% for message in messages %}
+            <div class="alert alert-success">{{ message }}</div>
+          {% endfor %}
+      
+      {% endif %}
+      {{ post_form_key.media }}
+     <form method="post" enctype="multipart/form-data">
+       <table>
+         {{ post_form_key.as_table }}
+       </table>
+       {% csrf_token %}
+       <input type="submit" class="btn btn-primary" value="Submit Form 1">
+     </form>
+    </div>
+   {% include 'front_end/sidebar.html' %}
+  </div>
+</section>
+{% endblock %}
