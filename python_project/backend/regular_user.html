@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+    <link rel="icon" type="image/png" sizes="32x30" href="images/favicon.png">
+    <link href="css/admin.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body id="admin">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3" id="top-sidebar">
+          <a href="regular_user.html">
+            <img src="images/admin-logo.png" class="img-responsive">
+          </a>
+        </div>
+        <div class="col-sm-9" id="top-content">
+          <div class="status pull-right">
+            <img src="images/user.jpg" class="img-circle">
+            <div class="userStatus">
+              <a class="userStatus dropdown-toggle" data-toggle="dropdown" id="userStatus">
+                  Benedict
+                   <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+               <li><a href="logout.html">Log Out</a></li>
+               <li><a href="change_password.html">Change Password</a></li>
+               <li><a href="add_user.html">Edit Profile</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3" id="adim-sidebar">
+          <div class="row">
+            <div class="col-sm-3">
+              <img src="images/user.jpg" class="img-circle">
+            </div>
+            <div class="col-sm-9">
+              <span>Benedict</span><br>
+              <span class="fa fa-circle text-success"></span>
+              Online<br>
+            </div>
+          </div>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                   <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                     Posts
+                     <span class="pull-right"> 
+                       <span class="fa fa-angle-left"></span>
+                     </span>
+                   </a>
+                </h4>
+              </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  <ul class="nav">
+                    <li>
+                      <a href="add_post.html">
+                        <span class="fa fa-circle-o"></span>
+                         Add Post
+                      </a>
+                    </li>
+                    <li>
+                      <a href="view_post.html">
+                        <span class="fa fa-circle-o"></span>
+                        View Posts
+                      </a>
+                    </li> 
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+        <div class="col-sm-9" id="admin-main-content">
+          <div class="row">
+            <div class="col-sm-3">
+             <div class="inner-box">
+               <a href=""> 
+                <i class="fa fa-users"></i>
+                <span>15</span>
+                <h4>Regular Users</h4>
+               </a>
+             </div>
+            </div> 
+            <div class="col-sm-3">
+             <div class="inner-box">
+               <a href=""> 
+                <i class="fa fa-male"></i> 
+                 <span>10</span>
+                 <h4> Male</h4>
+                 <span class="little-text">Subscribers</span>
+               </a>
+             </div>
+            </div> 
+            <div class="col-sm-3">
+             <div class="inner-box">
+               <a href=""> 
+                <i class="fa fa-female"></i> 
+                <span>9</span>
+                <h4>Female</h4>
+                <span class="little-text">Subscribers</span>
+               </a>
+             </div>
+            </div> 
+            <div class="col-sm-3">
+             <div class="inner-box">
+               <a href=""> 
+                <i class="fa fa-pencil-square-o"></i>
+                <span>10</span>
+                <h4>Posts</h4>
+                <span class="little-text">Your Posts</span>
+               </a>
+             </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+   
+
+
+
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
