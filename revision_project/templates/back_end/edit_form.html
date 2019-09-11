@@ -1,0 +1,25 @@
+{% extends 'back_end/back_base.html' %}
+{% load static %}
+<!Doctype html>
+{% block title %}
+{{ user.first_name }} {{ user.last_name }}
+{% endblock %}
+
+
+{% block content %}
+	<h2>Edit User Data</h2>
+
+	{% if messages %}
+
+	    {% for message in messages %}
+	   		<div class="alert alert-success">{{ message }}</div>
+	    {% endfor %}
+	
+	{% endif %}
+	<form method="post">
+		{% csrf_token %}
+		{{ edit_key.as_p }}
+		<input type="submit" value="Edit" class="btn btn-success">
+	</form>
+
+{% endblock %}

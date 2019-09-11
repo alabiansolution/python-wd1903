@@ -1,0 +1,16 @@
+{% extends 'back_end/back_base.html' %}
+{% load static %}
+<!Doctype html>
+{% block title %}
+{{ user.first_name }} {{ user.last_name }}
+{% endblock %}
+
+
+{% block content %}
+	<h2>My Profile</h2>
+	<p><strong>Username: </strong> {{ user.username }}</p>
+	<p><strong>Firstname: </strong> {{ user.first_name }}</p>
+	<p><strong>Lastname: </strong> {{ user.last_name }}</p>
+	<p><strong>Email: </strong> {{ user.email }}</p>
+
+{% endblock %}

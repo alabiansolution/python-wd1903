@@ -1,0 +1,16 @@
+{% extends 'registration/back_front_base.html' %}
+{% load static %}
+<!Doctype html>
+{% block title %}
+Confirm Logout
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Do you really want to logout</h1>
+
+<a href="{% url 'back_end:login' %}">Logout</a>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'registration/back_front_base.html' %}
+{% load static %}
+<!Doctype html>
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+
+<h1>Register</h1>
+
+<form method="post">
+  {{ reg.as_p }}
+  {% csrf_token %}
+  <input type="submit" value="Register">
+</form>
+<a href="{% url 'back_end:login' %}">Login</a>
+
+{% endblock %}
